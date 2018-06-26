@@ -41,15 +41,15 @@ class App extends Component {
     let currentScore = this.state.currentScore;
     let friends = this.state.friends;
 
-    if(currentScore > highScore){
+    if (currentScore > highScore) {
       highScore = currentScore;
     }
     currentScore = 0;
-    friends.forEach((element) =>{
-element.clicked = false;
+    friends.forEach((element) => {
+      element.clicked = false;
     });
     shuffleArr(friends);
-    this.setState({friends, currentScore, highScore});
+    this.setState({ friends, currentScore, highScore });
   }
 
 
